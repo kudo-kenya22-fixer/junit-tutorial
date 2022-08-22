@@ -22,8 +22,15 @@ class CalculatorTest {
 
     @Test
     public void multiplyで乗算結果が取得できる() {
-        double expected = 11;
+        double expected = 12;
         double actual = Calculator.multiply(3, 4);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void 関数の中でAddを読んでみる() {
+        double expected = 12;
+        double actual = Calculator.multiplyInAdd(3);
         assertEquals(expected, actual);
     }
 }
